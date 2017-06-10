@@ -16,3 +16,14 @@ $(document).ready(function() {
     $(".title").css({ "background-position": traX + "%" + traY + "%" });
   });
 });
+
+var btnOpen=document.getElementById('open');
+var modal= document.getElementById('modal')
+var btnClose=document.getElementById('close');
+
+btnOpen.onclick=function(){
+  modal.style.display="block";
+}
+btnClose.onclick=function() {
+modal.style.display="none";
+}
