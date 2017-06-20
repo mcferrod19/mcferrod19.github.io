@@ -1,6 +1,6 @@
 'use strict';
 
-//Move Title Image
+
 
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
@@ -27,6 +27,9 @@ function moveTitleImage() {
   });
 
 }
+
+ready(moveTitleImage);
+
 
 //modal
 
