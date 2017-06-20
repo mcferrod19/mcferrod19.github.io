@@ -1,0 +1,23 @@
+button {
+  text-decoration: none;
+  background: none;
+  border-radius: 4em;
+  border: none;
+
+  svg {
+    width: 3em;
+    height: 3em;
+  }
+}
+.button-modal {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+
+  button{
+    &:hover{
+      background-color: $background-opacity-color;
+    }
+  }
+
+}

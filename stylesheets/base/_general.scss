@@ -1,0 +1,23 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  width:100%;
+  height: 100%;
+}
+body{
+
+  background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+svg{
+  width:5em;
+  fill:black;
+  &:hover{
+    fill: black;
+  }
+}
