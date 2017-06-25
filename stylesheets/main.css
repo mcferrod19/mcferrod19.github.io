@@ -1,33 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Aref+Ruqaa|Hammersmith+One");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
 html {
-  width: 100%;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(#ebece7), to(white));
   background: linear-gradient(#ebece7, white);
-  margin: 0;
-  width: 100%;
   height: 100%;
-  font-family: 'Raleway', sans-serif; }
+  margin: 0;
+  width: 100%; }
 
 svg {
-  width: 5em;
-  fill: black; }
+  fill: black;
+  width: 5em; }
   svg:hover {
     fill: black; }
 
+.container-logo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+  .container-logo img {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 3.3em;
+    padding: 0.5em;
+    width: 3.3em; }
+
+@media (max-width: 800px) {
+  .container-logo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%; }
+    .container-logo img {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 6.3em;
+      padding: 0.5em;
+      width: 6.3em; } }
 button {
-  text-decoration: none;
   background: none;
   border-radius: 4em;
-  border: none; }
-  button svg {
-    width: 3em;
-    height: 3em; }
+  border: none;
+  text-decoration: none; }
 
 .button-modal {
   display: -webkit-box;
@@ -35,12 +72,20 @@ button {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 2em; }
+          justify-content: center; }
+  .button-modal a {
+    color: #474D59;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    padding: 1em;
+    text-decoration: none; }
   .button-modal button:hover {
     background-color: rgba(0, 0, 0, 0.5); }
 
 .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,50 +93,71 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 2em; }
 
 .container-modal {
-  position: fixed;
-  width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 10000;
+  position: fixed;
   -webkit-transition: opacity 500ms ease-in;
   transition: opacity 500ms ease-in;
+  width: 100%;
+  z-index: 10000;
   cursor: pointer;
   display: none; }
   .container-modal article {
     padding: 2em; }
 
+.wrapper {
+  color: #b7b7bc;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  height: 14vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 3em;
+  text-align: center;
+  width: 50%; }
+
 .title {
-  font-weight: 800;
-  color: transparent;
-  font-size: 9em;
   background: url("http://www.todopaisajes.com/Imagenes/bosque-con-niebla.jpg") repeat;
   -webkit-background-clip: text;
-  position: relative;
-  text-align: center;
+  color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 9em;
+  font-weight: 1200;
   line-height: 1em;
-  padding-top: 1em; }
+  padding-top: 0.5em;
+  position: relative;
+  text-align: center; }
 
 .subtitle {
+  display: block;
+  padding-top: 1em;
   text-align: center;
-  text-transform: uppercase;
-  padding-top: 1em; }
+  text-transform: uppercase; }
 
-@media (max-width: 300px) {
+.mobile-title {
+  display: none; }
+
+@media (max-width: 800px) {
   .title {
+    display: none; }
+
+  .mobile-title {
+    background: url("http://www.todopaisajes.com/Imagenes/bosque-con-niebla.jpg") repeat;
     -webkit-background-clip: text;
-    background-image: url("http://www.todopaisajes.com/Imagenes/bosque-con-niebla.jpg"), repeat;
     color: transparent;
-    font-size: 3em;
-    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9em;
+    font-weight: 1200;
     line-height: 1em;
+    padding-top: 0.5em;
     position: relative;
     text-align: center; }
 
@@ -120,6 +186,20 @@ button {
     -webkit-transition: opacity 500ms ease-in;
     transition: opacity 500ms ease-in;
     width: 100%;
-    z-index: 10000; } }
+    z-index: 10000; }
+
+  .wrapper {
+    color: #b7b7bc;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    height: 14vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 8em;
+    text-align: center;
+    width: 80%; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,23 +1,17 @@
 .container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-
-    margin: 2em;
-
+  margin: 2em;
 }
 
 .container-modal {
-  position: fixed;
-  width: 100%;
-  // top: 2em;
-  // left: 2em;
-  // right: 2em;
-  // bottom: 2em;
   background: $background-opacity-color;
-  z-index: 10000;
+  position: fixed;
   transition: opacity 500ms ease-in;
+  width: 100%;
+  z-index: 10000;
   cursor: pointer;
   display: none;
   article{
@@ -25,38 +19,61 @@
   }
 }
 
+.wrapper {
+  color: $secondary-color;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  height: 14vh;
+  justify-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 3em;
+  text-align: center;
+  width: 50%;
+}
+
 .title {
-  font-weight: 800;
-  color: transparent;
-  font-size: 9em;
   background: url("http://www.todopaisajes.com/Imagenes/bosque-con-niebla.jpg") repeat;
-  // background-position: 40% 50%;
   -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 9em;
+  font-weight: 1200;
+  line-height: 1em;
+  padding-top: 0.5em;
   position: relative;
   text-align: center;
-  line-height: 1em;
-  padding-top: 1em;
 }
 
 .subtitle {
-  // display: block;
+  display: block;
+  padding-top: 1em;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 1em;
 }
 
-@media (max-width: 300px) {
+.mobile-title {
+  display: none;
+}
+
+@media (max-width: 800px) {
+
   .title {
+    display: none;
+  }
+  .mobile-title {
+    background: url("http://www.todopaisajes.com/Imagenes/bosque-con-niebla.jpg") repeat;
     -webkit-background-clip: text;
-    // background-position: 40% 50%;
-    background-image: url("http://www.todopaisajes.com/Imagenes/bosque-con-niebla.jpg"), repeat;
     color: transparent;
-    font-size: 3em;
-    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9em;
+    font-weight: 1200;
     line-height: 1em;
+    padding-top: 0.5em;
     position: relative;
     text-align: center;
   }
+
   .container {
     align-items: center;
     display: flex;
@@ -74,5 +91,18 @@
     transition: opacity 500ms ease-in;
     width: 100%;
     z-index: 10000;
+  }
+
+  .wrapper {
+    color: $secondary-color;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    height: 14vh;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 8em;
+    text-align: center;
+    width: 80%;
   }
 }
